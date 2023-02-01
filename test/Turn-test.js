@@ -1,8 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const Turn = require('../src/Turn');
 const Card = require('../src/Card');
+const Turn = require('../src/Turn');
 
 describe('Turn', function() {
 
@@ -68,7 +68,7 @@ describe('Turn', function() {
 
   });
 
-  it('should be able to tell user if they NOT correct', () => {
+  it('should be able to inform the user if they are NOT correct', () => {
     expect(turn.match).to.be.null
 
     const checkAnswer = turn.evaluateGuess()
@@ -80,7 +80,7 @@ describe('Turn', function() {
     expect(tellUser).to.equal('incorrect!');
   });
 
-  it('should be able to tell user if they ARE correct', () => {
+  it('should be able to inform the user if they ARE correct', () => {
     turn = new Turn('sea otter', card)
 
     expect(turn.match).to.be.null
