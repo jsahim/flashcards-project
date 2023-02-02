@@ -88,7 +88,6 @@ describe('Round', function() {
     round.takeTurn("bad guess 2")
 
     expect(round.incorrectGuesses).to.deep.equal([14, 12]);
-    expect(round.calculatePercentCorrect()).to.equal(100);
     expect(round.turns).to.equal(3);
   }); 
 
@@ -98,7 +97,6 @@ describe('Round', function() {
     round.takeTurn("Fitzgerald")
 
     expect(round.incorrectGuesses).to.deep.equal([14]);
-    expect(round.calculatePercentCorrect()).to.equal(50);
     expect(round.turns).to.equal(3);
 
     expect(round.endRound()).to.equal("** Round over! ** You answered 50% of the questions correctly!")

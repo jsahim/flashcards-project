@@ -13,13 +13,12 @@ class Round {
     return this.currentCard
   }
   takeTurn(guess){
-    this.currentCard = this.returnCurrentCard()
+    this.returnCurrentCard()
     this.userTurn = new Turn(guess, this.currentCard);
     this.turns++ 
     if(!this.userTurn.evaluateGuess()){
       this.incorrectGuesses.push(this.currentCard.id)
     }
-    this.returnCurrentCard()
     return this.userTurn.giveFeedback()
   }
   calculatePercentCorrect(){

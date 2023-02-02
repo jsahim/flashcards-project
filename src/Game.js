@@ -17,7 +17,7 @@ class Game {
     this.printMessage(newDeck, this.currentRound)
     this.printQuestion(this.currentRound)
   }
-  printMessage(deck, round) {
+  printMessage(deck) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
