@@ -20,13 +20,13 @@ class Round {
       this.incorrectGuesses.push(this.currentCard.id)
     }
     this.returnCurrentCard()
-    this.userTurn.giveFeedback()
+    return this.userTurn.giveFeedback()
   }
   calculatePercentCorrect(){
-    return this.incorrectGuesses.length * 50
+    return 100 - (this.incorrectGuesses.length * 3)
   }
   endRound(){
-    return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
+    return console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
 }
 

@@ -13,7 +13,6 @@ class Game {
       cardsArray.push(new Card(element.id, element.question, element.answers, element.correctAnswer))
     })
     const newDeck = new Deck(cardsArray);
-    console.log(cardsArray)
     this.currentRound = new Round(newDeck);
     this.printMessage(newDeck, this.currentRound)
     this.printQuestion(this.currentRound)

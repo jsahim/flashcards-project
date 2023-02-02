@@ -23,11 +23,10 @@ describe('Game', function() {
 
   it('should be an instance of Game', () => {
     expect(game).to.be.an.instanceof(Game);
-    game.start(prototypeQuestions)
   }); 
 
-  it.skip('should be able to start the game', () => {
-
+  it('should be able to start the game', () => {
+    game.start(prototypeQuestions)
     expect(game.currentRound).to.be.an('Object');
   });  
 
