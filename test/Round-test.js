@@ -6,7 +6,7 @@ const Deck = require('../src/Deck');
 const Turn = require('../src/Turn');
 const Round = require('../src/Round');
 
-describe('Deck', function() {
+describe('Round', function() {
   let card1, card2, card3, deck, round;
   
   beforeEach('card instances and deck instance', () => {
@@ -79,9 +79,10 @@ describe('Deck', function() {
     expect(round.turns).to.equal(1);
     expect(round.userTurn.match).to.equal(true);
     expect(round.incorrectGuesses).to.deep.equal([]);
+    
   }); 
 
-  it('should be able to guess CORRECTLY', () => {
+  it('should be able to make both CORRECT and INCORRECT guesses', () => {
     round.takeTurn("sea otter")
     round.takeTurn("bad guess 1")
     round.takeTurn("bad guess 2")
