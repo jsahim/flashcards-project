@@ -22,10 +22,13 @@ class Round {
     return this.userTurn.giveFeedback()
   }
   calculatePercentCorrect(){
-    return 100 - (this.incorrectGuesses.length * 3)
+    const scoreMath =  Math.round(100 - ((this.incorrectGuesses.length / this.deckStack.stack.length) * 100))
+    return scoreMath
   }
   endRound(){
-    return console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    const finalScore = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
+    console.log(finalScore);
+    return finalScore;
   }
 }
 
